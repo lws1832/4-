@@ -1,0 +1,30 @@
+{% include "../layout/top.html" %}
+
+<table>
+    <form action="/board/view" method="post">
+        
+        <ul>
+          
+            <li>
+                <span>글제목 : </span>
+                <span>{{view.subject}}</span>
+            </li>
+            <li>
+                <span>작성자 : </span>
+                <span>{{view.woo_name}}</span>
+            </li>
+            <li>
+                <span>내용</span>  
+                <span>{{view.content}}</span>
+            </li>
+        </ul>
+        </ul>
+</table>
+
+<input type="submit" value="삭제">
+</form>
+<a href="/board/list">목록</a>
+<a href="/board/update">수정</a>
+
+
+{% include "../layout/bottom.html" %}

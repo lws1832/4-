@@ -1,0 +1,24 @@
+{% include "../layout/top.html" %}
+
+<h2>글쓰기 페이지</h2>
+<form action="/board/write" method="post">
+    <table>
+        <tr>
+            <td>제목</td>
+            <td><input type="text" name="subject"></td>
+        </tr>
+        <tr>
+            <td>작성자</td>
+            <td><input type="text" name="woo_name"></td>
+        </tr>
+        <tr>
+            <td>내용</td>
+           <td><textarea name="content"></textarea></td>
+           
+        </tr>
+    </table>
+    <a href="/board/list">목록</a>
+    
+<input type="submit" value="글작성">
+</form>
+{% include "../layout/bottom.html" %}

@@ -1,0 +1,24 @@
+{% include "../layout/top.html" %}
+<table>
+    <tr>
+        <td>번호</td>
+        <td>제목</td>
+        <td>작성자</td>
+        <td>날짜</td>
+        <td>조회수</td>
+    </tr>
+  
+
+    {% for item in list %}
+    <tr>
+        <td>{{item.idx}}</td>
+        <td><a href="./view?idx={{item.idx}}">{{item.subject}}</a></td>
+        <td>{{item.name}}</td>
+        <td>{{item.today}}</td>
+        <td>{{item.hit}}</td>
+    </tr>
+    {% endfor %}
+</table>
+    <a href="/board/write" class="btn">글작성</a>
+
+{% include "../layout/bottom.html" %}
